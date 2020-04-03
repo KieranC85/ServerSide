@@ -7,7 +7,7 @@ class UserController < ApplicationController
         redirect_to :controller => :items
     end 
     
-    def logout
+    def logout 
         session[:login] = nil
         session[:cart] = nil
         flash[:notice] = "You have been successfully logged out!!"
