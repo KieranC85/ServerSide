@@ -17,11 +17,8 @@
         Brand: <%= item.brand %></p>
        
        <p>
-         <%= link_to 'Show',  item, :class => "button", :role => "button" %>
-         <%= link_to 'Edit',  edit_item_path(item), :class => "button", :role => "button" %>
-         <%= link_to 'Destroy',  item, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %>
-         
         
+         <%= link_to 'Show',  item, :class => "button", :role => "button" %>
          <a href="/cart/<%= item.id %>" class="button">Add To Cart</a>
       
        </p>
@@ -35,6 +32,10 @@
 <br>
 <footer class = "foot">
 <% if user_signed_in? %>    
+
+<%= link_to 'Edit',  edit_item_path(item), :class => "button", :role => "button" %>
+<%= link_to 'Destroy',  item, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %>
+         
 <%= link_to 'New Item', new_item_path, :class =>"button", :role=>"button" %>
 <%= link_to 'Edit', edit_item_path(item), :class =>"button", :role=>"button" %>
 <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"button", :role=>"button" %>
