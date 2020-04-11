@@ -43,8 +43,9 @@ Rails.application.routes.draw do
   get '/cart/decrease/:id' => 'cart#decrease'
   
   root :to => 'site#home'
-
-
+  
+  post '/search' => 'items#search'
+  
   
   #get 'static_pages/home'
   #get 'static_pages/help'
