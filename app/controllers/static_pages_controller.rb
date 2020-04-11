@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
+  
   def home
-  @categories = Category.all
+   @categories = Category.all
   end
 
   def help
@@ -49,4 +50,6 @@ class StaticPagesController < ApplicationController
     
   end
 
-#end
+  end 
+
+end
