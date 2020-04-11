@@ -25,8 +25,6 @@ class StaticPagesController < ApplicationController
   
   session[:cart] = nil
   
-end
-
 def paid
     # redirect_to "/cart/clear"
     flash[:notice] = 'Transaction Complete'
@@ -46,3 +44,4 @@ def paid
     #"Paid by User:#{current_user.id} #{current_user.name} #{current_user.surname}")
     
   end
+end
