@@ -48,4 +48,7 @@ You have just placed an order <%=@orderReg.id %></h1>
           <td>Shipping &euro;30</td>
           <td>You Pay &euro; <%= @overall %></td>
       </tr>
+<tr>
+          <td><h2>  <a href="/paid/<%= @order.id %>" class="button">Pay Now</a></h2></td>
+      </tr>
 </table>
