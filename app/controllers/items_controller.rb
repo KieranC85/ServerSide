@@ -88,4 +88,10 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:title, :description, :price, :image_url, :category, :brand)
     end
+    
+    def search
+     st = "%#{params[:q]}%"
+     @items = Item.where("title like ?", st)
+    end
+
 end
