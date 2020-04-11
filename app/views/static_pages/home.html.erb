@@ -5,9 +5,19 @@
 <%= image_tag("Building.jpg", alt: "Welcome Logo", :class => "welcomeIm") %>    
     
     
+
 <h1>Charity Fund Raising App for SJAIDSF&F</h1>
 <p>Welcome to your first home page!</p>
 <br>
+
 <br>
-<p>Text here for the web site</p>
+
+  <% @categories.each do |category| %>
+       <div class="itemhols">
+           
+           <p><%= category.description %></p>
+         </div>
+    
+    <% end %>
+
 </div>

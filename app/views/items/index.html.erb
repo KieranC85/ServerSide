@@ -20,6 +20,7 @@
         
          <%= link_to 'Show',  item, :class => "button", :role => "button" %>
          <a href="/cart/<%= item.id %>" class="button">Add To Cart</a>
+
          
          <% if session[:login] == 1 %> 
         <%= link_to 'Edit', edit_item_path(item), :class =>"button", :role=>"button" %>
@@ -38,15 +39,10 @@
 
        </p>
        
-
         
       </div>
     <% end %>
-    
-
-    
 
 </div>
 
 <br>
-
