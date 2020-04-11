@@ -77,7 +77,7 @@ class ItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  # putting this her before any private method as per tutorial 12 instructions
+  # putting this here before any private method as per tutorial 12 instructions
     def search
      st = "%#{params[:q]}%"
      @items = Item.where("title like ?", st)
