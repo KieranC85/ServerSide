@@ -49,6 +49,24 @@
         
       </ul>
 </header>
+    
+    <p>
+    <!-- this is a search partial included in the  application.html.erb page -->
+    <!-- it is called using -->
+    <%=render 'layouts/search'%>
+      
+    <!-- this is the search coder in the partial -->
+      
+    <%= form_tag("/search", :method => "post") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+    <% end %>
+      
+    </p>
+
+      
+    
 
 
 
