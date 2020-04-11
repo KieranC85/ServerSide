@@ -77,6 +77,11 @@ class ItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # putting this her before any private method as per tutorial 12 instructions
+    def search
+     st = "%#{params[:q]}%"
+     @items = Item.where("title like ?", st)
+    end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -87,11 +92,6 @@ class ItemsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def item_params
       params.require(:item).permit(:title, :description, :price, :image_url, :category, :brand)
-    end
-    
-    def search
-     st = "%#{params[:q]}%"
-     @items = Item.where("title like ?", st)
     end
 
 end
