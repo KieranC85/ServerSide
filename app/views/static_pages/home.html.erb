@@ -1,20 +1,15 @@
 <% provide(:title, "Home") %>
 
 
-
-<h1>Charity Website</h1>
-
-
 <div class="mainCont">
-<%= image_tag("Inert image here", alt: "Welcome Logo", :class => "welcomeIm") %>    
+<%= image_tag("Building.jpg", alt: "Welcome Logo", :class => "welcomeIm") %>    
     
     
-<h1>Home</h1>
-<p>Welcome to your first home page</p>
-    
-<%=render 'layouts/categories'%>
- 
-<h1>Categories</h1>
+
+<h1>Charity Fund Raising App for SJAIDSF&F</h1>
+<p>Welcome to your first home page!</p>
+<br>
+
 <br>
 
   <% @categories.each do |category| %>
