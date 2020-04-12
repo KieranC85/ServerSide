@@ -1,13 +1,10 @@
 <% provide(:title, "Home") %>
 
-
 <div class="mainCont">
 <%= image_tag("Building.jpg", alt: "Welcome Logo", :class => "welcomeIm") %>    
-    
-    
 
 <h1>Charity Fund Raising App for SJAIDSF&F</h1>
-<p>Welcome to your first home page!</p>
+<p>Please visit our products page for the most up to date items to donate </p>
 <br>
 
 <br>
@@ -18,11 +15,12 @@
 <p>
     
   <% @categories.each do |category| %>
-       <div class="itemhols">
+  
+    <div class="itemhols">
            
         <p><%= category.description %></p>
            
-         </div>
+    </div>
          
 </p>
 
