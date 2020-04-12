@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   get '/help' => 'static_pages#help'
   get '/about' => 'static_pages#about'
 
-  get '/products' => 'static_pages#products'
+  get '/products' => 'items#index'
   get '/category/:title', to: 'static_pages#category'
   
   get '/login' => 'user#login'

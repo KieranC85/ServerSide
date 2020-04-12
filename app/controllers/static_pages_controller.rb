@@ -15,6 +15,7 @@ class StaticPagesController < ApplicationController
     @items = Item.where("category like?", catName)
   end
   
+  
   def createOrder
      # Step 1: Get the current user
      @user = User.find(current_user.id)
@@ -29,6 +30,9 @@ class StaticPagesController < ApplicationController
      item = Item.find_by_id(id)
      @orderitem = @order.orderitems.build(:item_id => item.id, :title => item.title, :description => item.description, :quantity => quantity, :price=> item.price)
      @orderitem.save
+  end
+     @orders = Order.last
+          
   end
 
 

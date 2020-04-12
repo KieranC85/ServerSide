@@ -11,15 +11,21 @@
 <br>
 
 <br>
+
+<%=render 'layouts/categories'%>
+
 <p>
+    
   <% @categories.each do |category| %>
        <div class="itemhols">
            
-           <p><%= category.description %></p>
+        <p><%= category.description %></p>
            
          </div>
          
 </p>
+
+
     </div>
     <% end %>
 
