@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
   
   def home
    @categories = Category.all
+   @items = Item.all
   end
 
   def help
@@ -54,6 +55,6 @@ class StaticPagesController < ApplicationController
     
   end
 
-  end 
+end 
 
-end
+
