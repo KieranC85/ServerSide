@@ -19,27 +19,26 @@ class ItemsController < ApplicationController
     @user = User.find(current_user.id)
     @orders = @user.orders.all
     
-    <% if @order.user.email == @user.email %>
+    if @order.user.email == @user.email 
     # to stop the wrong person seeing the wrong order
     @user = User.find(current_user.id)
-    <% else %>
-    <h1>You did not place this order</h1>
-    <% end %>
+    else 
+      fh.puts "You did not place this order"
+    end
     
 
   end
 
-  # GET /items/new
+ 
   def new
     @item = Item.new
   end
 
-  # GET /items/1/edit
+
   def edit
   end
 
-  # POST /items
-  # POST /items.json
+
   def create
     @item = Item.new(item_params)
 
@@ -54,8 +53,6 @@ class ItemsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /items/1
-  # PATCH/PUT /items/1.json
   def update
     respond_to do |format|
       if @item.update(item_params)
@@ -68,8 +65,6 @@ class ItemsController < ApplicationController
     end
   end
 
-  # DELETE /items/1
-  # DELETE /items/1.json
   def destroy
     @item.destroy
     respond_to do |format|
@@ -77,7 +72,7 @@ class ItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  # putting this here before any private method as per tutorial 12 instructions
+
     def search
      st = "%#{params[:q]}%"
      @items = Item.where("title like ?", st)
