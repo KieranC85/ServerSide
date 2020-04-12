@@ -11,15 +11,22 @@
 <br>
 
 <br>
+
+<%=render 'layouts/categories'%>
+<%=render 'layouts/popular'%>
+
 <p>
+    
   <% @categories.each do |category| %>
        <div class="itemhols">
            
-           <p><%= category.description %></p>
+        <p><%= category.description %></p>
            
          </div>
          
 </p>
+
+
     </div>
     <% end %>
 

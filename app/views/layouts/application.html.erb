@@ -52,11 +52,7 @@
 </header>
     
     <p>
-    <!-- this is a search partial included in the  application.html.erb page -->
-    <!-- it is called using -->
- 
-      
-    <!-- this is the search code in the partial -->
+
       
     <%= form_tag("/search", :method => "post") do %>
     <%= label_tag(:q, "Search for:") %>
@@ -65,11 +61,6 @@
     <% end %>
       
     </p>
-
-      
-    
-
-
 
   <div class="container">
     <%= yield %>
