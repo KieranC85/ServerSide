@@ -29,6 +29,8 @@ Rails.application.routes.draw do
 
   get '/help' => 'static_pages#help'
   get '/about' => 'static_pages#about'
+  
+  get '/aboutSend/:id' => 'static_pages#aboutSend'
 
   get '/products' => 'items#index'
   get '/category/:title', to: 'static_pages#category'
@@ -45,6 +47,7 @@ Rails.application.routes.draw do
   root :to => 'site#home'
   
   post '/search' => 'items#search'
+  
   
   
   #get 'static_pages/home'
