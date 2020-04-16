@@ -15,5 +15,12 @@
   <%= @order.status %>
 </p>
 
+   
+<% if @order.user.email == @user.email %>
+<% else %>
+   
+<h1>You did not place this order</h1>
+<% end %>
+
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

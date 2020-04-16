@@ -11,21 +11,6 @@ class ItemsController < ApplicationController
   # GET /items/1.json
  
   def show
-    # to show order items
-    @orderitems = Orderitem.all
-    @orderitems = Orderitem.where(order_id: params[:id])
-    
-    #Orders Per Customer - To filter orders by user logged iin
-    @user = User.find(current_user.id)
-    @orders = @user.orders.all
-    
-    if @order.user.email == @user.email 
-    # to stop the wrong person seeing the wrong order
-    @user = User.find(current_user.id)
-    else 
-      fh.puts "You did not place this order"
-    end
-    
 
   end
 
