@@ -24,8 +24,8 @@
 }
 
 .headSec h1 {
-    color: #ffffff;
-    font-size: 80px;
+    color: #F7F9Fb;
+    font-size: 50px;
     padding: 15px;
 
 }
@@ -35,8 +35,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #31708E;
-    font-size: 20px;
+    background-color: #F7F9Fb;
+    font-size: 15px;
     color:#F7F9Fb;
 
 }
@@ -45,11 +45,10 @@ li {float:left;}
 
 li a {
     display: block;
-    color: #ffffff;
+    color:#F7F9Fb ;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-
 }
 
 
@@ -57,17 +56,17 @@ li a {
 
     margin: auto;
     width:80%;
-    border: 3px solid #b3e0ff;
+   /* border: 3px solid #b3e0ff;*/
     padding: 10px;
     text-align: center;
 }
 
-.welcomeIm {width: 30%;}
+.welcomeIm {width: 50%;}
 
 
 .foot {
     min-height: 80px;
-    background-color: #b3e0ff;
+    background-color: #31708E;
     width: 100%;
     margin-top: 10px;
     overflow: auto;
@@ -87,7 +86,7 @@ li a {
 }
 #itemsContainer h1 {
    display: block;
-    color: #4CAF50;
+    color: #5085A5;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -106,7 +105,7 @@ li a {
 }
 .itemhols h1 {
    display: block;
-    color: #4CAF50;
+    color: #5085A5;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -115,7 +114,7 @@ li a {
 }
 .itemhols p {
    display: block;
-    color: #4CAF50;
+    color: #5085A5;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -130,7 +129,7 @@ li a {
     
 }
 .button {
-    background-color: #4CAF50;
+    background-color: #8FC1E3;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -141,6 +140,21 @@ li a {
     margin: 4px 2px;
     cursor: pointer;
 }
+
+.buttonNewItem {
+    background-color: #8FC1E3;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
+
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -153,7 +167,7 @@ input[type=text], select {
 
 input[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #5085A5;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title) %> | Charity Store </title>
+    <title><%= yield(:title) %> | St. Joseph’s Assoc. IDS F&F </title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,20 +11,22 @@
   <body>
 
  <header class="headSec">
-    <h1>Charity Store</h1>
+    <h1>St. Joseph’s Assoc. IDS F&F</h1>
       
       <ul class="tabs">
         <li><%= link_to "Home",  "/" %></li>
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Help", help_path %></li>
         <li><%= link_to "Products", products_path %></li>
-        <li><%= link_to "Log In",   login_path %></li>
-        <li><%= link_to "Log Out",   logout_path %></li>
+        <!--- <li><%= link_to "Log In",   login_path %></li> --->
+        <!--- <li><%= link_to "Log Out",   logout_path %></li> --->
         <li><%= link_to "View Cart", "/cart" %></li>
+        
 
         <% if user_signed_in? %>
                  <li><a href="#">Hi <%= current_user.email %></a></li>
                  <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+                 <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
         <% else %>
                  <li><%= link_to 'Register', new_user_registration_path %></li> 
                  <li><%= link_to 'Sign in', new_user_session_path %></li>
@@ -33,13 +35,35 @@
         <% if session[:login] == 1 %> 
         <li><%= link_to "Admin Logout", logout_path %></li>
         <% else %>
-        
         <li><%= link_to "Admin Login", login_path %></li>
         <% end %>
-
+        
+        <!---
+        <% if user_signed_in? %>
+                  
+                 
+                 <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+          <% else %>
+                 <li><%= link_to 'Register', new_user_registration_path %></li> 
+                 <li><%= link_to 'Sign in', new_user_session_path %></li>
+                 <li><%= link_to "View Orders", orders_path  %></li>
+          <% end %>
+        --->
+        
         
       </ul>
 </header>
+    
+    <p>
+
+      
+    <%= form_tag("/search", :method => "post") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+    <% end %>
+      
+    </p>
 
   <div class="container">
     <%= yield %>
@@ -51,9 +75,4 @@
 
 </footer>
 
-
-
-
-
-</footer>
 </html>

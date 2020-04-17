@@ -17,7 +17,6 @@
                 </td>
                             
             <td class="title"><%= link_to item.title, item %></td>
-            <td><a href="#">Remove From Cart</a></td>
             <td class="price"><%= number_to_currency(item.price, :unit =>"€") %></td>
             <td class="quantity"><%= quantity %></td>
             <td><a href="/cart/remove/<%= item.id %>">Remove From Cart</a></td>
@@ -25,7 +24,7 @@
             <td 
 
         </tr>
-                <% total += quantity * item.price %>
+            <% total += quantity * item.price %>
         <% end %>
         <tr>
             Grand Total: <%= number_to_currency(total, :unit => "€") %>
@@ -36,7 +35,8 @@
         <% if @cart.empty? %>
             <h1> Your cart is empty</h1>
         <%end%>
-
+        
+        <a href="/checkout" class="button">Checkout</a>
             <a href="/items" class="button">Continue Shopping</a>
             <a href="/cart/clear" class="button">Clear Cart</a>
            

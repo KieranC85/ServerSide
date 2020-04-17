@@ -1,6 +1,27 @@
 Rails.application.routes.draw do
   
-  devise_for :users
+  # resources :orders
+  # get 'orderitems/index'
+
+  # get 'orderitems/show'
+
+  # get 'orderitems/new'
+
+  # get 'orderitems/edit'
+  
+  resources :orders do
+    resources:orderitems
+  end
+  
+  resources :categories
+  
+  devise_for :users do 
+    resources :orders 
+  end
+  
+  get '/checkout' => 'cart#createOrder'
+  get '/paid/:id' => 'static_pages#paid'
+  
   get 'cart/index'
 
   resources :items
@@ -8,7 +29,11 @@ Rails.application.routes.draw do
 
   get '/help' => 'static_pages#help'
   get '/about' => 'static_pages#about'
-  get '/products' => 'static_pages#products'
+  
+  get '/aboutSend/:id' => 'static_pages#aboutSend'
+
+  get '/products' => 'items#index'
+  get '/category/:title', to: 'static_pages#category'
   
   get '/login' => 'user#login'
   get '/logout' => 'user#logout'
@@ -20,8 +45,10 @@ Rails.application.routes.draw do
   get '/cart/decrease/:id' => 'cart#decrease'
   
   root :to => 'site#home'
-
-
+  
+  post '/search' => 'items#search'
+  
+  
   
   #get 'static_pages/home'
   #get 'static_pages/help'
