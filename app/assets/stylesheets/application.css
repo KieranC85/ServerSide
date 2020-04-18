@@ -101,6 +101,8 @@ li a {
     width: 22%;
     padding:10px;
     min-height: 300px;
+    border: 1px solid lightgray;
+    border-radius: 7px;
    
 }
 .itemhols h1 {
@@ -109,7 +111,7 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 20px
+    font-size: 20px;
     
 }
 .itemhols p {

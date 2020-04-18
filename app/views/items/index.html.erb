@@ -10,16 +10,16 @@
      
       <% @items.each do |item| %>
       <div class="itemhols">
-       <div class="jumbotron">
+
        <h1><%= item.title %></h1>
        
        <%= link_to (image_tag item.image_url, :class => "itemholsIm"), item %>
         <p><%= item.description %></p>
        <p>Price <%= number_to_currency(item.price, :unit => "€") %>
        <br>
-        Category: <%= item.category %>
+        Address: <%= item.category %>
         <br>
-        Brand: <%= item.brand %></p>
+        Area: <%= item.brand %></p>
        
        <p>
         
@@ -34,9 +34,8 @@
 <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"button", :role=>"button" %>
 <% end %>
 
-
        </p>
-        </div>
+
       </div>
     <% end %>
     <div id="buttonNewItem">
