@@ -35,7 +35,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #F7F9Fb;
+    background-color: #8FC1E3;
     font-size: 15px;
     color:#F7F9Fb;
 
@@ -156,7 +156,7 @@ li a {
 }
 
 input[type=text], select {
-    width: 100%;
+    width: 40%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -166,7 +166,7 @@ input[type=text], select {
 }
 
 input[type=submit] {
-    width: 100%;
+    width: 20%;
     background-color: #5085A5;
     color: white;
     padding: 14px 20px;
