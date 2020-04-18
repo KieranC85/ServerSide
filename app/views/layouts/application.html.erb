@@ -16,12 +16,13 @@
       <ul class="tabs">
         <li><%= link_to "Home",  "/" %></li>
         <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Help", help_path %></li>
+        <li><%= link_to "Contact", help_path %></li>
         <li><%= link_to "Products", products_path %></li>
         <!--- <li><%= link_to "Log In",   login_path %></li> --->
         <!--- <li><%= link_to "Log Out",   logout_path %></li> --->
-        <li><%= link_to "View Cart", "/cart" %></li>
-        
+          <% if user_signed_in? %>
+            <li><%= link_to "View Cart", "/cart" %></li>
+          <% end %>
 
         <% if user_signed_in? %>
                  <li><a href="#">Hi <%= current_user.email %></a></li>

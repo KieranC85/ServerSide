@@ -101,7 +101,7 @@ li a {
     width: 22%;
     padding:10px;
     min-height: 300px;
-    border: 1px solid lightgray;
+    //border: 1px solid lightgray;
     border-radius: 7px;
    
 }
