@@ -3,6 +3,8 @@
  <div id="itemsContainer">
   
   <h1>Items</h1>
+     <p><%= link_to 'Add Item', new_item_path, :class =>"button", :role=>"button" %>
+      <%= link_to 'Add Category', new_category_path, :class =>"button", :role=>"button"  %></p>
      
       <% @items.each do |item| %>
       <div class="itemhols">
@@ -19,7 +21,7 @@
        <p>
         
          <%= link_to 'Show',  item, :class => "button", :role => "button" %>
-         <a href="/cart/<%= item.id %>" class="button">Add To Cart...!</a>
+         <a href="/cart/<%= item.id %>" class="button">Add To Cart</a>
 
 <br>
         
@@ -27,7 +29,6 @@
        
 <%= link_to 'Edit', edit_item_path(item), :class =>"button", :role=>"button" %>
 <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"button", :role=>"button" %>
-<%= link_to 'New Category', new_category_path, :class =>"button", :role=>"button"  %>
 <% end %>
 
 
@@ -38,8 +39,8 @@
     <div id="buttonNewItem">
    <% if session[:login] == 1 %>    
        
-      <%= link_to 'New Item', new_item_path, :class =>"button", :role=>"button" %>
-
+      <p><%= link_to 'Add Item', new_item_path, :class =>"button", :role=>"button" %>
+      <%= link_to 'Add Category', new_category_path, :class =>"button", :role=>"button"  %></p>
    <% end %>
   </div>
 
