@@ -3,8 +3,10 @@
  <div id="itemsContainer">
   
   <h1>Items</h1>
+  <% if session[:login] == 1 %>    
      <p><%= link_to 'Add Item', new_item_path, :class =>"button", :role=>"button" %>
       <%= link_to 'Add Category', new_category_path, :class =>"button", :role=>"button"  %></p>
+     <% end %>
      
       <% @items.each do |item| %>
       <div class="itemhols">
