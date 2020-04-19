@@ -1,6 +1,7 @@
 <table class="catalog">
-  <% @items.limit(2).order(:id).each do |item| %>
+
       <tr>
+          <% @items.limit(2).order(:id).each do |item| %>
         <td>
           <div class="image">
             <%= link_to (image_tag item.image_url, :style => "height:100px"), item %>
@@ -24,6 +25,7 @@
             <%end%>  
         </div>
         </td>
+            <% end %>
       </tr>
-    <% end %>
+
 </table>
